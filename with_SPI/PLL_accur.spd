@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="PLL_accur_sim/PLL_accur.vo" type="VERILOG" />
+ <topLevel name="PLL_accur" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

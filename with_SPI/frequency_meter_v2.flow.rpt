@@ -1,5 +1,5 @@
 Flow report for frequency_meter_v2
-Wed Aug 26 21:55:53 2020
+Sat Aug 29 01:10:15 2020
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Aug 26 21:55:40 2020           ;
+; Flow Status                     ; Successful - Sat Aug 29 01:10:00 2020           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; frequency_meter_v2                              ;
 ; Top-level Entity Name           ; frequency_meter_v2                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 66 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 141                                             ;
+; Logic utilization (in ALMs)     ; 65 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 154                                             ;
 ; Total pins                      ; 142 / 457 ( 31 % )                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
@@ -58,7 +58,7 @@ agreement for further details.
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
 ; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                                  ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
 +---------------------------------+-------------------------------------------------+
 
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/26/2020 21:54:10 ;
+; Start date & time ; 08/29/2020 01:08:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; frequency_meter_v2  ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 44883549519213.159846805007488        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 44883549519213.159865249912560        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; Mux_freq_bb.v                         ; --            ; --          ; --         ;
@@ -89,6 +89,10 @@ agreement for further details.
 ; MISC_FILE                           ; PLL_temp_sim/PLL_temp.vo              ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL_temp_1.cmp                        ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL_temp_1_sim/PLL_temp_1.vo          ; --            ; --          ; --         ;
+; MISC_FILE                           ; PLL_acur1.cmp                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; PLL_acur1_sim/PLL_acur1.vo            ; --            ; --          ; --         ;
+; MISC_FILE                           ; PLL_accur.cmp                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; PLL_accur_sim/PLL_accur.vo            ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
@@ -96,6 +100,10 @@ agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
 ; SPD_FILE                            ; PLL_temp.spd                          ; --            ; --          ; --         ;
 ; SPD_FILE                            ; PLL_temp_1.spd                        ; --            ; --          ; --         ;
+; SPD_FILE                            ; PLL_acur1.spd                         ; --            ; --          ; --         ;
+; SPD_FILE                            ; PLL_accur.spd                         ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                    ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                    ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                    ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                    ; --            ; --          ; --         ;
 ; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                    ; Verilog_2001  ; --          ; --         ;
@@ -108,11 +116,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 5027 MB             ; 00:00:35                           ;
-; Fitter                    ; 00:01:01     ; 1.0                     ; 6537 MB             ; 00:01:30                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 5050 MB             ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:12     ; 1.0                     ; 5369 MB             ; 00:00:11                           ;
-; Total                     ; 00:01:40     ; --                      ; --                  ; 00:02:26                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 5034 MB             ; 00:00:41                           ;
+; Fitter                    ; 00:01:07     ; 1.0                     ; 6554 MB             ; 00:01:36                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 5043 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 1.0                     ; 5387 MB             ; 00:00:12                           ;
+; Total                     ; 00:01:50     ; --                      ; --                  ; 00:02:38                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

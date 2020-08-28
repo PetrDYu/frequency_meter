@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Wed Aug 26 21:54:26 2020
+Analysis & Synthesis Status : Successful - Sat Aug 29 01:08:40 2020
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : frequency_meter_v2
 Top-level Entity Name : frequency_meter_v2
@@ -13,5 +13,5 @@ Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1
+Total PLLs : 2
 Total DLLs : 0

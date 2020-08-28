@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Aug 26 21:55:28 2020
+Fitter Status : Successful - Sat Aug 29 01:09:48 2020
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : frequency_meter_v2
 Top-level Entity Name : frequency_meter_v2
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 66 / 32,070 ( < 1 % )
-Total registers : 141
+Logic utilization (in ALMs) : 65 / 32,070 ( < 1 % )
+Total registers : 154
 Total pins : 142 / 457 ( 31 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
@@ -16,5 +16,5 @@ Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1 / 6 ( 17 % )
+Total PLLs : 2 / 6 ( 33 % )
 Total DLLs : 0 / 4 ( 0 % )

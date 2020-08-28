@@ -22,10 +22,6 @@
 				{
 					"name" : "GPIO[7]",
 					"strict" : false
-				},
-				{
-					"name" : "GPIO_1[11]",
-					"strict" : false
 				}
 			]
 		}
