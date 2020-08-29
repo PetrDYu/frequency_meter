@@ -136,15 +136,15 @@ PLL_temp pll_0
 	
 	.refclk(CLOCK_50),
 	.rst(~KEY[0]),
-	.outclk_0(clk_0_0),
-	.outclk_1(clk_0_1),
-	.outclk_2(clk_0_2),
-	.outclk_3(clk_0_3),
-	.outclk_4(clk_0_4),
-	.outclk_5(clk_0_5),
-	.outclk_6(clk_0_6),
-	.outclk_7(clk_0_7),
-	.outclk_8(clk_0_8),
+	.outclk_0(clk_0_0),//700 МГц, но на Cyclone V корректно не работает 
+	.outclk_1(clk_0_1),//100 МГц
+	.outclk_2(clk_0_2),//200 МГц
+	.outclk_3(clk_0_3),//233_333_333 Гц
+	.outclk_4(clk_0_4),//280 МГц
+	.outclk_5(clk_0_5),//350 МГц
+	.outclk_6(clk_0_6),//466_666_666 Гц
+	.outclk_7(clk_0_7),//25 МГц
+	.outclk_8(clk_0_8),//5 МГц
 	
 );
 
@@ -153,15 +153,15 @@ PLL_temp_1 pll_1
 	
 	.refclk(CLOCK_50),
 	.rst(~KEY[0]),
-	.outclk_0(clk_1_0),
-	.outclk_1(clk_1_1),
-	.outclk_2(clk_1_2),
-	.outclk_3(clk_1_3),
-	.outclk_4(clk_1_4),
-	.outclk_5(clk_1_5),
-	.outclk_6(clk_1_6),
-	.outclk_7(clk_1_7),
-	.outclk_8(clk_1_8),
+	.outclk_0(clk_1_0),//200 МГц
+	.outclk_1(clk_1_1),//100 МГц
+	.outclk_2(clk_1_2),//150 МГц
+	.outclk_3(clk_1_3),//171_428_571 Гц
+	.outclk_4(clk_1_4),//133_333_333 Гц
+	.outclk_5(clk_1_5),//109_090_909 Гц
+	.outclk_6(clk_1_6),//75 МГц
+	.outclk_7(clk_1_7),//30 МГц
+	.outclk_8(clk_1_8),//5 МГц
 	
 );
 
@@ -170,7 +170,7 @@ PLL_acur1 pll_2
 	
 	.refclk(CLOCK_50),
 	.rst(~KEY[0]),
-	.outclk_0(clk_2_0)
+	.outclk_0(clk_2_0)//100_396_825 Гц
 	
 );
 
@@ -179,7 +179,7 @@ PLL_accur pll_3
 	
 	.refclk(clk_2_0),
 	.rst(~KEY[0]),
-	.outclk_0(clk_2_1)
+	.outclk_0(clk_2_1)//99_998_424 Гц
 	
 );
 
@@ -199,6 +199,8 @@ freq_m_module freq_meter
 // SPI
 
 reg rstb, aset;
+/*rstb - сигнал reset SPI
+  aset - сигнал асинхронного сброса счётчика байтов для SPI*/
 
 wire done;//сигнал завершения отправки очередного байта по SPI
 reg [7:0] tdata = 8'b0;//регистр, содержащий данный, отправляемые по SPI
