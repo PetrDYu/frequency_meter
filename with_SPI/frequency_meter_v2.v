@@ -41,7 +41,7 @@ module frequency_meter_v2(
 //=======================================================
 
 wire cout_i;
-reg cout_b, sclr_b = 0, aclr_i = 0;
+reg cout_b, sclr_b = 0, aclr_i = 0, led_out = 0;
 
 //отладочные линии для подключения к PLL
 
@@ -189,12 +189,21 @@ freq_m_module freq_meter
 (
 	
 	.clk_base(clk_1_0),
-	.clk_in(clk_2_0),
+	.clk_in(clk_0_5),
 	.freq_mem(freq_mem),
 	.cout_i(cout_i),
 	.cout_b(cout_b)
 	
 );
+
+always @(posedge cout_b)
+begin
+	
+	led_out = led_out + 1'b1;
+	
+end
+
+assign LEDR[0] = led_out;
 
 // SPI
 

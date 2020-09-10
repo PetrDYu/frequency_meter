@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Aug 29 01:08:40 2020
+Analysis & Synthesis Status : Successful - Wed Sep 09 22:27:44 2020
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : frequency_meter_v2
 Top-level Entity Name : frequency_meter_v2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 122
+Total registers : 1655
 Total pins : 142
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 12,416
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

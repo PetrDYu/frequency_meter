@@ -95,7 +95,7 @@ Counter i_c
 
 /* при установке сигнала cout_b в 1 значение измеряемой частоты 
 сохраняется в выходном регистре freq_mem*/
-always @(posedge cout_b)
+always @(negedge cout_b)
 begin
 	
 	freq_mem = freq_i;
