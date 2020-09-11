@@ -1,9 +1,13 @@
-LPM_AVALUE=1
-LPM_DIRECTION=UP
-LPM_PORT_UPDOWN=PORT_UNUSED
-LPM_TYPE=LPM_COUNTER
-LPM_WIDTH=2
+INTENDED_DEVICE_FAMILY="Cyclone V"
+enable_bus_hold=FALSE
+left_shift_series_termination_control=FALSE
+number_of_channels=1
+open_drain_output=FALSE
+pseudo_differential_mode=FALSE
+use_differential_mode=TRUE
+use_oe=FALSE
+use_termination_control=FALSE
 DEVICE_FAMILY="Cyclone V"
-aset
-clock
-q
+datain
+dataout
+dataout_b

@@ -40,7 +40,7 @@ module frequency_meter_v2(
 //  REG/WIRE declarations
 //=======================================================
 
-wire cout_i;
+wire cout_i, clk_in;
 reg cout_b, sclr_b = 0, aclr_i = 0, led_out = 0;
 
 //отладочные линии для подключения к PLL
@@ -189,7 +189,7 @@ freq_m_module freq_meter
 (
 	
 	.clk_base(clk_1_0),
-	.clk_in(clk_0_5),
+	.clk_in(clk_in),
 	.freq_mem(freq_mem),
 	.cout_i(cout_i),
 	.cout_b(cout_b)
@@ -282,6 +282,25 @@ assign LEDR[2] = GPIO[1];
 	.sdin(sdin),	//data in
 	.sdout(sdout),	//data out
 	.done(done),	//сигнал завершения передачи одного байта
+	
+);
+
+
+LVDS_BUF_IN lvds_in
+(
+	
+	.datain(GPIO[15]),
+	.datain_b(GPIO[12]),
+	.dataout(clk_in)
+	
+);
+
+LVDS_BUF_OUT lvds_out
+(
+	
+	.datain(clk_0_2),
+	.dataout_b(GPIO[13]),
+	.dataout(GPIO[14])
 	
 );
 

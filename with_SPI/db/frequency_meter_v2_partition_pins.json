@@ -26,6 +26,14 @@
 				{
 					"name" : "GPIO[7]",
 					"strict" : false
+				},
+				{
+					"name" : "GPIO[12]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[15]",
+					"strict" : false
 				}
 			]
 		}

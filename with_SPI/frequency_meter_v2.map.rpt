@@ -1,5 +1,5 @@
 Analysis & Synthesis report for frequency_meter_v2
-Wed Sep 09 22:27:45 2020
+Fri Sep 11 00:07:54 2020
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -77,7 +77,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 09 22:27:44 2020           ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 11 00:07:54 2020           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; frequency_meter_v2                              ;
 ; Top-level Entity Name           ; frequency_meter_v2                              ;
@@ -221,6 +221,8 @@ agreement for further details.
 ; PLL_acur1/PLL_acur1_0002.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_acur1/PLL_acur1_0002.v                                         ; PLL_acur1   ;
 ; PLL_accur.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur.v                                                        ; PLL_accur   ;
 ; PLL_accur/PLL_accur_0002.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur/PLL_accur_0002.v                                         ; PLL_accur   ;
+; LVDS_BUF_IN.v                                                      ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v                                                      ;             ;
+; LVDS_BUF_OUT.v                                                     ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v                                                     ;             ;
 ; frequency_meter_v2.v                                               ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v                                               ;             ;
 ; altera_pll.v                                                       ; yes             ; Megafunction                                 ; c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v                                                                          ;             ;
 ; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_counter.tdf                                                                       ;             ;
@@ -291,11 +293,11 @@ agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 885                                                                                     ;
 ;                                             ;                                                                                         ;
-; Combinational ALUT usage for logic          ; 524                                                                                     ;
+; Combinational ALUT usage for logic          ; 523                                                                                     ;
 ;     -- 7 input functions                    ; 1                                                                                       ;
-;     -- 6 input functions                    ; 112                                                                                     ;
-;     -- 5 input functions                    ; 153                                                                                     ;
-;     -- 4 input functions                    ; 42                                                                                      ;
+;     -- 6 input functions                    ; 114                                                                                     ;
+;     -- 5 input functions                    ; 151                                                                                     ;
+;     -- 4 input functions                    ; 41                                                                                      ;
 ;     -- <=3 input functions                  ; 216                                                                                     ;
 ;                                             ;                                                                                         ;
 ; Dedicated logic registers                   ; 1655                                                                                    ;
@@ -311,7 +313,7 @@ agreement for further details.
 ;                                             ;                                                                                         ;
 ; Maximum fan-out node                        ; PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 1012                                                                                    ;
-; Total fan-out                               ; 9068                                                                                    ;
+; Total fan-out                               ; 9067                                                                                    ;
 ; Average fan-out                             ; 3.43                                                                                    ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------+
 
@@ -321,17 +323,21 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                            ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |frequency_meter_v2                                                                                                                     ; 524 (9)           ; 1655 (10)    ; 12416             ; 0          ; 142  ; 0            ; |frequency_meter_v2                                                                                                                                                                                                                                                                                                                                            ; frequency_meter_v2                ; work         ;
+; |frequency_meter_v2                                                                                                                     ; 523 (9)           ; 1655 (10)    ; 12416             ; 0          ; 142  ; 0            ; |frequency_meter_v2                                                                                                                                                                                                                                                                                                                                            ; frequency_meter_v2                ; work         ;
 ;    |Counter_4:count_n_freq|                                                                                                             ; 3 (0)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq                                                                                                                                                                                                                                                                                                                     ; Counter_4                         ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component|                                                                                               ; 3 (0)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component                                                                                                                                                                                                                                                                                   ; lpm_counter                       ; work         ;
 ;          |cntr_r5j:auto_generated|                                                                                                      ; 3 (3)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component|cntr_r5j:auto_generated                                                                                                                                                                                                                                                           ; cntr_r5j                          ; work         ;
+;    |LVDS_BUF_IN:lvds_in|                                                                                                                ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in                                                                                                                                                                                                                                                                                                                        ; LVDS_BUF_IN                       ; work         ;
+;       |LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component|                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component                                                                                                                                                                                                                                                            ; LVDS_BUF_IN_iobuf_in_6pi          ; work         ;
+;    |LVDS_BUF_OUT:lvds_out|                                                                                                              ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out                                                                                                                                                                                                                                                                                                                      ; LVDS_BUF_OUT                      ; work         ;
+;       |LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component|                                                                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component                                                                                                                                                                                                                                                      ; LVDS_BUF_OUT_iobuf_out_ukt        ; work         ;
 ;    |PLL_temp:pll_0|                                                                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0                                                                                                                                                                                                                                                                                                                             ; PLL_temp                          ; PLL_temp     ;
 ;       |PLL_temp_0002:pll_temp_inst|                                                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst                                                                                                                                                                                                                                                                                                 ; PLL_temp_0002                     ; PLL_temp     ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                         ; altera_pll                        ; work         ;
 ;    |PLL_temp_1:pll_1|                                                                                                                   ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp_1:pll_1                                                                                                                                                                                                                                                                                                                           ; PLL_temp_1                        ; PLL_temp_1   ;
 ;       |PLL_temp_1_0002:pll_temp_1_inst|                                                                                                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst                                                                                                                                                                                                                                                                                           ; PLL_temp_1_0002                   ; PLL_temp_1   ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                   ; altera_pll                        ; work         ;
-;    |freq_m_module:freq_meter|                                                                                                           ; 78 (14)           ; 98 (34)      ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|freq_m_module:freq_meter                                                                                                                                                                                                                                                                                                                   ; freq_m_module                     ; work         ;
+;    |freq_m_module:freq_meter|                                                                                                           ; 77 (13)           ; 98 (34)      ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|freq_m_module:freq_meter                                                                                                                                                                                                                                                                                                                   ; freq_m_module                     ; work         ;
 ;       |Counter:b_c|                                                                                                                     ; 32 (0)            ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:b_c                                                                                                                                                                                                                                                                                                       ; Counter                           ; work         ;
 ;          |lpm_counter:LPM_COUNTER_component|                                                                                            ; 32 (0)            ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:b_c|lpm_counter:LPM_COUNTER_component                                                                                                                                                                                                                                                                     ; lpm_counter                       ; work         ;
 ;             |cntr_uui:auto_generated|                                                                                                   ; 32 (32)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:b_c|lpm_counter:LPM_COUNTER_component|cntr_uui:auto_generated                                                                                                                                                                                                                                             ; cntr_uui                          ; work         ;
@@ -504,6 +510,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|Counter_4:count_n_freq                                                                                                                                                                                                                                              ; Counter_4.v     ;
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:b_c                                                                                                                                                                                                                                ; Counter.v       ;
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:i_c                                                                                                                                                                                                                                ; Counter.v       ;
+; Altera ; ALTIOBUF     ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in                                                                                                                                                                                                                                                 ; LVDS_BUF_IN.v   ;
+; Altera ; ALTIOBUF     ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out                                                                                                                                                                                                                                               ; LVDS_BUF_OUT.v  ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_temp:pll_0                                                                                                                                                                                                                                                      ; PLL_temp.v      ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_temp_1:pll_1                                                                                                                                                                                                                                                    ; PLL_temp_1.v    ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_acur1:pll_2                                                                                                                                                                                                                                                     ; PLL_acur1.v     ;
@@ -1851,9 +1859,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; outclk_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; outclk_2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outclk_5 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1941,23 +1949,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 9                           ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 44                          ;
-; arriav_io_obuf        ; 72                          ;
-; arriav_lcell_comb     ; 108                         ;
+; arriav_io_ibuf        ; 1                           ;
+; arriav_io_obuf        ; 71                          ;
+; arriav_lcell_comb     ; 107                         ;
 ;     arith             ; 66                          ;
 ;         1 data inputs ; 66                          ;
-;     normal            ; 42                          ;
+;     normal            ; 41                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 21                          ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 23                          ;
 ; boundary_port         ; 240                         ;
 ; generic_pll           ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 1.95                        ;
+; Average LUT depth     ; 1.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2212,7 +2221,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Wed Sep 09 22:27:03 2020
+    Info: Processing started: Fri Sep 11 00:07:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off frequency_meter_v2 -c frequency_meter_v2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -2244,6 +2253,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll_acc
     Info (12023): Found entity 1: PLL_accur File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll_accur/pll_accur_0002.v
     Info (12023): Found entity 1: PLL_accur_0002 File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur/PLL_accur_0002.v Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file lvds_buf_in.v
+    Info (12023): Found entity 1: LVDS_BUF_IN_iobuf_in_6pi File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v Line: 47
+    Info (12023): Found entity 2: LVDS_BUF_IN File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v Line: 92
+Info (12021): Found 2 design units, including 2 entities, in source file lvds_buf_out.v
+    Info (12023): Found entity 1: LVDS_BUF_OUT_iobuf_out_ukt File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 47
+    Info (12023): Found entity 2: LVDS_BUF_OUT File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 96
 Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(149): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 149
 Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(166): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 166
 Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(286): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 286
@@ -2544,6 +2559,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12128): Elaborating entity "cntr_r5j" for hierarchy "Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component|cntr_r5j:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:spi" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 286
 Warning (10230): Verilog HDL assignment warning at spi_slave.v(74): truncated value with size 32 to match size of target (4) File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/spi_slave.v Line: 74
+Info (12128): Elaborating entity "LVDS_BUF_IN" for hierarchy "LVDS_BUF_IN:lvds_in" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 296
+Info (12128): Elaborating entity "LVDS_BUF_IN_iobuf_in_6pi" for hierarchy "LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v Line: 107
+Info (12128): Elaborating entity "LVDS_BUF_OUT" for hierarchy "LVDS_BUF_OUT:lvds_out" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 305
+Info (12128): Elaborating entity "LVDS_BUF_OUT_iobuf_out_ukt" for hierarchy "LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 113
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g584.tdf
     Info (12023): Found entity 1: altsyncram_g584 File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/altsyncram_g584.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
@@ -2566,7 +2585,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2020.09.09.23:27:30 Progress: Loading sld6878e44d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.09.11.01:07:39 Progress: Loading sld6878e44d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2600,9 +2619,9 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[7]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[8]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[1]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
-        Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[2]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[3]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[4]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+        Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[5]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[6]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[7]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[8]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
@@ -2615,6 +2634,8 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
@@ -2623,10 +2644,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
     Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
@@ -2738,7 +2755,7 @@ Warning (14632): Output pin "LEDR[2]" driven by bidirectional pin "GPIO[1]" cann
 Warning (14632): Output pin "LEDR[1]" driven by bidirectional pin "GPIO[3]" cannot be tri-stated File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 228 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 16 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 17 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
 Warning: OUTCLK port on the PLL is not properly connected on instance PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|general[0].gpll. The output clock port on the PLL must be connected. File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
@@ -2758,17 +2775,17 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
-Info (21057): Implemented 2074 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2073 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 53 output pins
     Info (21060): Implemented 72 bidirectional pins
-    Info (21061): Implemented 1827 logic cells
+    Info (21061): Implemented 1826 logic cells
     Info (21064): Implemented 97 RAM segments
     Info (21065): Implemented 3 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 173 warnings
-    Info: Peak virtual memory: 5130 megabytes
-    Info: Processing ended: Wed Sep 09 22:27:45 2020
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
+    Info: Peak virtual memory: 5129 megabytes
+    Info: Processing ended: Fri Sep 11 00:07:54 2020
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:01:12
 
 

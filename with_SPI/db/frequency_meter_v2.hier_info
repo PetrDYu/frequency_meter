@@ -81,10 +81,10 @@ GPIO[8] <> <UNC>
 GPIO[9] <> <UNC>
 GPIO[10] <> <UNC>
 GPIO[11] <> <UNC>
-GPIO[12] <> <UNC>
-GPIO[13] <> <UNC>
-GPIO[14] <> <UNC>
-GPIO[15] <> <UNC>
+GPIO[12] <> LVDS_BUF_IN:lvds_in.datain_b
+GPIO[13] <> LVDS_BUF_OUT:lvds_out.dataout_b
+GPIO[14] <> LVDS_BUF_OUT:lvds_out.dataout
+GPIO[15] <> LVDS_BUF_IN:lvds_in.datain
 GPIO[16] <> <UNC>
 GPIO[17] <> <UNC>
 GPIO[18] <> <UNC>
@@ -1787,5 +1787,29 @@ rdata[4] <= rdata[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[5] <= rdata[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[6] <= rdata[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[7] <= rdata[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|frequency_meter_v2|LVDS_BUF_IN:lvds_in
+datain[0] => datain[0].IN1
+datain_b[0] => datain_b[0].IN1
+dataout[0] <= LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component.dataout
+
+
+|frequency_meter_v2|LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component
+datain[0] => ibufa_0.DATA
+datain_b[0] => ibufa_0.NDATA
+dataout[0] <= ibufa_0.OUT
+
+
+|frequency_meter_v2|LVDS_BUF_OUT:lvds_out
+datain[0] => datain[0].IN1
+dataout[0] <= LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component.dataout
+dataout_b[0] <= LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component.dataout_b
+
+
+|frequency_meter_v2|LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component
+datain[0] => obufa_0.IN
+dataout[0] <= obufa_0.OUT
+dataout_b[0] <= obufa_0.OUTN
 
 

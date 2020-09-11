@@ -187,10 +187,10 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12]
+set_instance_assignment -name IO_STANDARD LVDS -to GPIO[12]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15]
+set_instance_assignment -name IO_STANDARD LVDS -to GPIO[14]
+set_instance_assignment -name IO_STANDARD LVDS -to GPIO[15]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18]
@@ -226,7 +226,6 @@ set_location_assignment PIN_AH17 -to GPIO[11]
 set_location_assignment PIN_AG16 -to GPIO[12]
 set_location_assignment PIN_AE16 -to GPIO[13]
 set_location_assignment PIN_AF16 -to GPIO[14]
-set_location_assignment PIN_AG17 -to GPIO[15]
 set_location_assignment PIN_AA18 -to GPIO[16]
 set_location_assignment PIN_AA19 -to GPIO[17]
 set_location_assignment PIN_AE17 -to GPIO[18]
@@ -535,5 +534,18 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=312" -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name QIP_FILE LVDS_BUF_IN.qip
+set_global_assignment -name QIP_FILE LVDS_BUF_OUT.qip
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[9](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[7](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[8](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[18](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[16](n)"
+set_location_assignment PIN_AE16 -to "GPIO[14](n)"
+set_location_assignment PIN_AG17 -to "GPIO[12](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[10](n)"
+set_instance_assignment -name IO_STANDARD LVDS -to "GPIO[12](n)"
+set_instance_assignment -name ENABLE_STRICT_PRESERVATION OFF -to GPIO[12] -section_id frequency_meter_v2
+set_instance_assignment -name ENABLE_STRICT_PRESERVATION OFF -to "GPIO[12](n)" -section_id frequency_meter_v2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
