@@ -53,8 +53,8 @@ KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
 LEDR[0] <= led_out.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= GPIO[3]~direct.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= LEDR[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SPI_SS.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SPI_SCK.DB_MAX_OUTPUT_PORT_TYPE
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>
@@ -72,39 +72,14 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
-GPIO[0] <> <UNC>
-GPIO[2] <> <UNC>
-GPIO[4] <> <UNC>
-GPIO[6] <> <UNC>
-GPIO[7] <> GPIO[7]
-GPIO[8] <> <UNC>
-GPIO[9] <> <UNC>
-GPIO[10] <> <UNC>
-GPIO[11] <> <UNC>
-GPIO[12] <> LVDS_BUF_IN:lvds_in.datain_b
-GPIO[13] <> LVDS_BUF_OUT:lvds_out.dataout_b
-GPIO[14] <> LVDS_BUF_OUT:lvds_out.dataout
-GPIO[15] <> LVDS_BUF_IN:lvds_in.datain
-GPIO[16] <> <UNC>
-GPIO[17] <> <UNC>
-GPIO[18] <> <UNC>
-GPIO[19] <> <UNC>
-GPIO[20] <> <UNC>
-GPIO[21] <> <UNC>
-GPIO[22] <> <UNC>
-GPIO[23] <> <UNC>
-GPIO[24] <> <UNC>
-GPIO[25] <> <UNC>
-GPIO[26] <> <UNC>
-GPIO[27] <> <UNC>
-GPIO[28] <> <UNC>
-GPIO[29] <> <UNC>
-GPIO[30] <> <UNC>
-GPIO[31] <> <UNC>
-GPIO[32] <> <UNC>
-GPIO[33] <> <UNC>
-GPIO[34] <> <UNC>
-GPIO[35] <> <UNC>
+lvds_in => clk_in.IN1
+lvds_out <= PLL_temp:pll_0.outclk_5
+SPI_SS => spi_slave:spi.ss
+SPI_SS => LEDR[1].DATAIN
+SPI_SCK => spi_slave:spi.sck
+SPI_SCK => LEDR[2].DATAIN
+SPI_DIN => spi_slave:spi.sdin
+SPI_DOUT <= spi_slave:spi.sdout
 GPIO_1[0] <> <UNC>
 GPIO_1[1] <> <UNC>
 GPIO_1[2] <> <UNC>
@@ -1787,29 +1762,5 @@ rdata[4] <= rdata[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[5] <= rdata[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[6] <= rdata[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rdata[7] <= rdata[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|frequency_meter_v2|LVDS_BUF_IN:lvds_in
-datain[0] => datain[0].IN1
-datain_b[0] => datain_b[0].IN1
-dataout[0] <= LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component.dataout
-
-
-|frequency_meter_v2|LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component
-datain[0] => ibufa_0.DATA
-datain_b[0] => ibufa_0.NDATA
-dataout[0] <= ibufa_0.OUT
-
-
-|frequency_meter_v2|LVDS_BUF_OUT:lvds_out
-datain[0] => datain[0].IN1
-dataout[0] <= LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component.dataout
-dataout_b[0] <= LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component.dataout_b
-
-
-|frequency_meter_v2|LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component
-datain[0] => obufa_0.IN
-dataout[0] <= obufa_0.OUT
-dataout_b[0] <= obufa_0.OUTN
 
 

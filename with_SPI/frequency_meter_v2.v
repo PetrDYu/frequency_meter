@@ -29,7 +29,14 @@ module frequency_meter_v2(
 	input 		     [9:0]		SW,
 
 	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-	inout 		    [35:0]		GPIO,
+	//inout 		    [35:0]		GPIO,
+	input lvds_in,//_p, lvds_in_n,
+	output lvds_out,//_p, lvds_out_n,
+	
+	input SPI_SS,
+	input SPI_SCK,
+	input SPI_DIN,
+	output SPI_DOUT,
 	
 	inout				 [35:0]		GPIO_1
 );
@@ -43,6 +50,9 @@ module frequency_meter_v2(
 wire cout_i, clk_in;
 reg cout_b, sclr_b = 0, aclr_i = 0, led_out = 0;
 
+assign lvds_out = clk_0_5;
+assign clk_in = lvds_in;
+
 //отладочные линии для подключения к PLL
 
 wire clk_0_0, clk_0_1, clk_0_2, clk_0_3, clk_0_4, clk_0_5, clk_0_6, clk_0_7, clk_0_8;
@@ -52,7 +62,7 @@ wire clk_2_0, clk_2_1;
 //Вариант переключения между входными частотами от PLL посредством свитчей (SW)
 
 //assign clk_base = SW[0] ? clk_1_0 : clk_0_0;
-//assign clk_in = SW[0] ? (SW[1] ? (SW[2] ? (SW[3] ? clk_1_8 : clk_1_7) : (SW[3] ? clk_1_6 : clk_1_5)) : (SW[2] ? (SW[3] ? clk_1_4 : clk_1_3) : (SW[3] ? clk_1_2 : clk_1_1))) : 
+//assign clk_out = SW[0] ? (SW[1] ? (SW[2] ? (SW[3] ? clk_1_8 : clk_1_7) : (SW[3] ? clk_1_6 : clk_1_5)) : (SW[2] ? (SW[3] ? clk_1_4 : clk_1_3) : (SW[3] ? clk_1_2 : clk_1_1))) : 
 								//(SW[1] ? (SW[2] ? (SW[3] ? clk_0_8 : clk_0_7) : (SW[3] ? clk_0_6 : clk_0_5)) : (SW[2] ? (SW[3] ? clk_0_4 : clk_0_3) : (SW[3] ? clk_0_2 : clk_0_1)));
 
 //Параметр, дублирующий значение в модуле freq_m_module для вывода его на 7-сегментные индикаторы
@@ -220,10 +230,10 @@ reg [31:0] freq_mem; //регистр-хранилище для данных о�
 wire ss, sck, sdin, sdout; //линии SPI
 
 //подключение соответствующих линий SPI 
-assign ss = GPIO[3];
+/*assign ss = GPIO[3];
 assign sck = GPIO[1];
 assign sdin = GPIO[5];
-assign GPIO[7] = sdout;
+assign GPIO[7] = sdout;*/
 
 //выключение SPI до момента первого рассчитанного значения частоты
 initial
@@ -266,8 +276,8 @@ Counter_4 count_n_freq
  );
 
 //Отладочные светодиоды, отражающие правильное подключение линий SPI (загораются в момент передачи данных)
-assign LEDR[1] = ~GPIO[3];
-assign LEDR[2] = GPIO[1];
+assign LEDR[1] = ~SPI_SS;
+assign LEDR[2] = SPI_SCK;
 
 //Подключение модуля SPI (модуль разработан не мной, там комментариев нет)
  spi_slave spi
@@ -277,20 +287,20 @@ assign LEDR[2] = GPIO[1];
 	.ten(1'b1),		//Разрешение передачи
 	.tdata(tdata),	//Регистр для передачи данных
 	.mlb(1'b1),		//С какого бита начинается передача по SPI
-	.ss(ss),			//slave select
-	.sck(sck),		//SPI clk
-	.sdin(sdin),	//data in
-	.sdout(sdout),	//data out
+	.ss(SPI_SS),			//slave select
+	.sck(SPI_SCK),		//SPI clk
+	.sdin(SPI_DIN),	//data in
+	.sdout(SPI_DOUT),	//data out
 	.done(done),	//сигнал завершения передачи одного байта
 	
 );
 
 
-LVDS_BUF_IN lvds_in
+/*LVDS_BUF_IN lvds_in
 (
 	
-	.datain(GPIO[15]),
-	.datain_b(GPIO[12]),
+	.datain(lvds_in_p),
+	.datain_b(lvds_in_n),
 	.dataout(clk_in)
 	
 );
@@ -299,9 +309,25 @@ LVDS_BUF_OUT lvds_out
 (
 	
 	.datain(clk_0_2),
-	.dataout_b(GPIO[13]),
-	.dataout(GPIO[14])
+	.dataout_b(lvds_out_n),
+	.dataout(lvds_out_p)
 	
-);
+);*/
 
+/*wire clk_in_temp;
+
+LVDS_RX lvdsrx
+(
+	
+	.rx_in(clk_in_temp),
+	.rx_out(clk_in)
+	
+);*/
+
+/*OCT oct1
+(
+	
+	rzqin(GPIO[15])
+	
+);*/
 endmodule

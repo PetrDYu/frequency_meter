@@ -16,23 +16,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[1]",
+					"name" : "SPI_DOUT",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[3]",
+					"name" : "SPI_SS",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[7]",
+					"name" : "SPI_SCK",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO[12]",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO[15]",
+					"name" : "lvds_in",
 					"strict" : false
 				}
 			]

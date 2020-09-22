@@ -1,13 +1,8 @@
 INTENDED_DEVICE_FAMILY="Cyclone V"
-enable_bus_hold=FALSE
-left_shift_series_termination_control=FALSE
-number_of_channels=1
-open_drain_output=FALSE
-pseudo_differential_mode=FALSE
-use_differential_mode=TRUE
-use_oe=FALSE
-use_termination_control=FALSE
+LPM_TYPE=ALT_OCT_POWER
+width_ptc=16
+width_stc=16
 DEVICE_FAMILY="Cyclone V"
-datain
-dataout
-dataout_b
+rzqin
+parallelterminationcontrol
+seriesterminationcontrol

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for frequency_meter_v2
-Fri Sep 11 00:07:54 2020
+Tue Sep 22 01:40:58 2020
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -77,14 +77,14 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Sep 11 00:07:54 2020           ;
+; Analysis & Synthesis Status     ; Successful - Tue Sep 22 01:40:58 2020           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; frequency_meter_v2                              ;
 ; Top-level Entity Name           ; frequency_meter_v2                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 1655                                            ;
-; Total pins                      ; 142                                             ;
+; Total pins                      ; 112                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 12,416                                          ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -221,8 +221,6 @@ agreement for further details.
 ; PLL_acur1/PLL_acur1_0002.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_acur1/PLL_acur1_0002.v                                         ; PLL_acur1   ;
 ; PLL_accur.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur.v                                                        ; PLL_accur   ;
 ; PLL_accur/PLL_accur_0002.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur/PLL_accur_0002.v                                         ; PLL_accur   ;
-; LVDS_BUF_IN.v                                                      ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v                                                      ;             ;
-; LVDS_BUF_OUT.v                                                     ; yes             ; User Wizard-Generated File                   ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v                                                     ;             ;
 ; frequency_meter_v2.v                                               ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v                                               ;             ;
 ; altera_pll.v                                                       ; yes             ; Megafunction                                 ; c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v                                                                          ;             ;
 ; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/altera/16.0/quartus/libraries/megafunctions/lpm_counter.tdf                                                                       ;             ;
@@ -302,7 +300,7 @@ agreement for further details.
 ;                                             ;                                                                                         ;
 ; Dedicated logic registers                   ; 1655                                                                                    ;
 ;                                             ;                                                                                         ;
-; I/O pins                                    ; 142                                                                                     ;
+; I/O pins                                    ; 112                                                                                     ;
 ; Total MLAB memory bits                      ; 0                                                                                       ;
 ; Total block memory bits                     ; 12416                                                                                   ;
 ;                                             ;                                                                                         ;
@@ -313,8 +311,8 @@ agreement for further details.
 ;                                             ;                                                                                         ;
 ; Maximum fan-out node                        ; PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 1012                                                                                    ;
-; Total fan-out                               ; 9067                                                                                    ;
-; Average fan-out                             ; 3.43                                                                                    ;
+; Total fan-out                               ; 9001                                                                                    ;
+; Average fan-out                             ; 3.53                                                                                    ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
@@ -323,14 +321,10 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                            ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |frequency_meter_v2                                                                                                                     ; 523 (9)           ; 1655 (10)    ; 12416             ; 0          ; 142  ; 0            ; |frequency_meter_v2                                                                                                                                                                                                                                                                                                                                            ; frequency_meter_v2                ; work         ;
+; |frequency_meter_v2                                                                                                                     ; 523 (9)           ; 1655 (10)    ; 12416             ; 0          ; 112  ; 0            ; |frequency_meter_v2                                                                                                                                                                                                                                                                                                                                            ; frequency_meter_v2                ; work         ;
 ;    |Counter_4:count_n_freq|                                                                                                             ; 3 (0)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq                                                                                                                                                                                                                                                                                                                     ; Counter_4                         ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component|                                                                                               ; 3 (0)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component                                                                                                                                                                                                                                                                                   ; lpm_counter                       ; work         ;
 ;          |cntr_r5j:auto_generated|                                                                                                      ; 3 (3)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component|cntr_r5j:auto_generated                                                                                                                                                                                                                                                           ; cntr_r5j                          ; work         ;
-;    |LVDS_BUF_IN:lvds_in|                                                                                                                ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in                                                                                                                                                                                                                                                                                                                        ; LVDS_BUF_IN                       ; work         ;
-;       |LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component|                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component                                                                                                                                                                                                                                                            ; LVDS_BUF_IN_iobuf_in_6pi          ; work         ;
-;    |LVDS_BUF_OUT:lvds_out|                                                                                                              ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out                                                                                                                                                                                                                                                                                                                      ; LVDS_BUF_OUT                      ; work         ;
-;       |LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component|                                                                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component                                                                                                                                                                                                                                                      ; LVDS_BUF_OUT_iobuf_out_ukt        ; work         ;
 ;    |PLL_temp:pll_0|                                                                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0                                                                                                                                                                                                                                                                                                                             ; PLL_temp                          ; PLL_temp     ;
 ;       |PLL_temp_0002:pll_temp_inst|                                                                                                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst                                                                                                                                                                                                                                                                                                 ; PLL_temp_0002                     ; PLL_temp     ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |frequency_meter_v2|PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                         ; altera_pll                        ; work         ;
@@ -510,8 +504,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|Counter_4:count_n_freq                                                                                                                                                                                                                                              ; Counter_4.v     ;
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:b_c                                                                                                                                                                                                                                ; Counter.v       ;
 ; Altera ; LPM_COUNTER  ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|freq_m_module:freq_meter|Counter:i_c                                                                                                                                                                                                                                ; Counter.v       ;
-; Altera ; ALTIOBUF     ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|LVDS_BUF_IN:lvds_in                                                                                                                                                                                                                                                 ; LVDS_BUF_IN.v   ;
-; Altera ; ALTIOBUF     ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|LVDS_BUF_OUT:lvds_out                                                                                                                                                                                                                                               ; LVDS_BUF_OUT.v  ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_temp:pll_0                                                                                                                                                                                                                                                      ; PLL_temp.v      ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_temp_1:pll_1                                                                                                                                                                                                                                                    ; PLL_temp_1.v    ;
 ; Altera ; altera_pll   ; 16.0    ; N/A          ; N/A          ; |frequency_meter_v2|PLL_acur1:pll_2                                                                                                                                                                                                                                                     ; PLL_acur1.v     ;
@@ -1859,9 +1851,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; outclk_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outclk_2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; outclk_5 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; outclk_8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1949,8 +1941,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 9                           ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 44                          ;
-; arriav_io_ibuf        ; 1                           ;
-; arriav_io_obuf        ; 71                          ;
+; arriav_io_obuf        ; 37                          ;
 ; arriav_lcell_comb     ; 107                         ;
 ;     arith             ; 66                          ;
 ;         1 data inputs ; 66                          ;
@@ -1962,11 +1953,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 3                           ;
 ;         5 data inputs ; 5                           ;
 ;         6 data inputs ; 23                          ;
-; boundary_port         ; 240                         ;
+; boundary_port         ; 210                         ;
 ; generic_pll           ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 1.91                        ;
+; Average LUT depth     ; 2.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1975,7 +1966,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -2221,7 +2212,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Fri Sep 11 00:07:13 2020
+    Info: Processing started: Tue Sep 22 01:40:07 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off frequency_meter_v2 -c frequency_meter_v2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -2259,17 +2250,22 @@ Info (12021): Found 2 design units, including 2 entities, in source file lvds_bu
 Info (12021): Found 2 design units, including 2 entities, in source file lvds_buf_out.v
     Info (12023): Found entity 1: LVDS_BUF_OUT_iobuf_out_ukt File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 47
     Info (12023): Found entity 2: LVDS_BUF_OUT File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 96
-Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(149): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 149
-Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(166): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 166
-Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(286): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 286
+Info (12021): Found 1 design units, including 1 entities, in source file lvds_rx.v
+    Info (12023): Found entity 1: LVDS_RX File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_RX.v Line: 40
+Info (12021): Found 2 design units, including 2 entities, in source file oct.v
+    Info (12023): Found entity 1: OCT_alt_oct_power_k4e File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/OCT.v Line: 47
+    Info (12023): Found entity 2: OCT File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/OCT.v Line: 125
+Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(159): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 159
+Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(176): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 176
+Warning (10275): Verilog HDL Module Instantiation warning at frequency_meter_v2.v(296): ignored dangling comma in List of Port Connections File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 296
 Warning (12125): Using design file frequency_meter_v2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: frequency_meter_v2 File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 6
 Info (12127): Elaborating entity "frequency_meter_v2" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at frequency_meter_v2.v(44): object "sclr_b" assigned a value but never read File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 44
-Warning (10036): Verilog HDL or VHDL warning at frequency_meter_v2.v(44): object "aclr_i" assigned a value but never read File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 44
+Warning (10036): Verilog HDL or VHDL warning at frequency_meter_v2.v(51): object "sclr_b" assigned a value but never read File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 51
+Warning (10036): Verilog HDL or VHDL warning at frequency_meter_v2.v(51): object "aclr_i" assigned a value but never read File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 51
 Warning (10034): Output port "LEDR[9..3]" at frequency_meter_v2.v(26) has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
-Info (12128): Elaborating entity "SEG_HEX" for hierarchy "SEG_HEX:u0" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 75
-Info (12128): Elaborating entity "PLL_temp" for hierarchy "PLL_temp:pll_0" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 149
+Info (12128): Elaborating entity "SEG_HEX" for hierarchy "SEG_HEX:u0" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 85
+Info (12128): Elaborating entity "PLL_temp" for hierarchy "PLL_temp:pll_0" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 159
 Info (12128): Elaborating entity "PLL_temp_0002" for hierarchy "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_temp.v Line: 35
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_temp/PLL_temp_0002.v Line: 109
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2335,7 +2331,7 @@ Info (12133): Instantiated megafunction "PLL_temp:pll_0|PLL_temp_0002:pll_temp_i
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "PLL_temp_1" for hierarchy "PLL_temp_1:pll_1" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 166
+Info (12128): Elaborating entity "PLL_temp_1" for hierarchy "PLL_temp_1:pll_1" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 176
 Info (12128): Elaborating entity "PLL_temp_1_0002" for hierarchy "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_temp_1.v Line: 35
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_temp_1/PLL_temp_1_0002.v Line: 109
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2401,7 +2397,7 @@ Info (12133): Instantiated megafunction "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_te
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "PLL_acur1" for hierarchy "PLL_acur1:pll_2" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 175
+Info (12128): Elaborating entity "PLL_acur1" for hierarchy "PLL_acur1:pll_2" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 185
 Info (12128): Elaborating entity "PLL_acur1_0002" for hierarchy "PLL_acur1:pll_2|PLL_acur1_0002:pll_acur1_inst" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_acur1.v Line: 20
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_acur1:pll_2|PLL_acur1_0002:pll_acur1_inst|altera_pll:altera_pll_i" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_acur1/PLL_acur1_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2467,7 +2463,7 @@ Info (12133): Instantiated megafunction "PLL_acur1:pll_2|PLL_acur1_0002:pll_acur
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "PLL_accur" for hierarchy "PLL_accur:pll_3" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 184
+Info (12128): Elaborating entity "PLL_accur" for hierarchy "PLL_accur:pll_3" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 194
 Info (12128): Elaborating entity "PLL_accur_0002" for hierarchy "PLL_accur:pll_3|PLL_accur_0002:pll_accur_inst" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur.v Line: 19
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_accur:pll_3|PLL_accur_0002:pll_accur_inst|altera_pll:altera_pll_i" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/PLL_accur/PLL_accur_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2533,7 +2529,7 @@ Info (12133): Instantiated megafunction "PLL_accur:pll_3|PLL_accur_0002:pll_accu
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "freq_m_module" for hierarchy "freq_m_module:freq_meter" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 197
+Info (12128): Elaborating entity "freq_m_module" for hierarchy "freq_m_module:freq_meter" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 207
 Info (12128): Elaborating entity "Counter" for hierarchy "freq_m_module:freq_meter|Counter:b_c" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/freq_m_module/freq_m_module.v Line: 80
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "freq_m_module:freq_meter|Counter:b_c|lpm_counter:LPM_COUNTER_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/Counter.v Line: 73
 Info (12130): Elaborated megafunction instantiation "freq_m_module:freq_meter|Counter:b_c|lpm_counter:LPM_COUNTER_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/Counter.v Line: 73
@@ -2545,7 +2541,7 @@ Info (12133): Instantiated megafunction "freq_m_module:freq_meter|Counter:b_c|lp
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_uui.tdf
     Info (12023): Found entity 1: cntr_uui File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/cntr_uui.tdf Line: 26
 Info (12128): Elaborating entity "cntr_uui" for hierarchy "freq_m_module:freq_meter|Counter:b_c|lpm_counter:LPM_COUNTER_component|cntr_uui:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "Counter_4" for hierarchy "Counter_4:count_n_freq" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 266
+Info (12128): Elaborating entity "Counter_4" for hierarchy "Counter_4:count_n_freq" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 276
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/Counter_4.v Line: 67
 Info (12130): Elaborated megafunction instantiation "Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/Counter_4.v Line: 67
 Info (12133): Instantiated megafunction "Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component" with the following parameter: File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/Counter_4.v Line: 67
@@ -2557,12 +2553,8 @@ Info (12133): Instantiated megafunction "Counter_4:count_n_freq|lpm_counter:LPM_
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r5j.tdf
     Info (12023): Found entity 1: cntr_r5j File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/cntr_r5j.tdf Line: 28
 Info (12128): Elaborating entity "cntr_r5j" for hierarchy "Counter_4:count_n_freq|lpm_counter:LPM_COUNTER_component|cntr_r5j:auto_generated" File: c:/altera/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:spi" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 286
+Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:spi" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 296
 Warning (10230): Verilog HDL assignment warning at spi_slave.v(74): truncated value with size 32 to match size of target (4) File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/spi_slave.v Line: 74
-Info (12128): Elaborating entity "LVDS_BUF_IN" for hierarchy "LVDS_BUF_IN:lvds_in" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 296
-Info (12128): Elaborating entity "LVDS_BUF_IN_iobuf_in_6pi" for hierarchy "LVDS_BUF_IN:lvds_in|LVDS_BUF_IN_iobuf_in_6pi:LVDS_BUF_IN_iobuf_in_6pi_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_IN.v Line: 107
-Info (12128): Elaborating entity "LVDS_BUF_OUT" for hierarchy "LVDS_BUF_OUT:lvds_out" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 305
-Info (12128): Elaborating entity "LVDS_BUF_OUT_iobuf_out_ukt" for hierarchy "LVDS_BUF_OUT:lvds_out|LVDS_BUF_OUT_iobuf_out_ukt:LVDS_BUF_OUT_iobuf_out_ukt_component" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/LVDS_BUF_OUT.v Line: 113
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g584.tdf
     Info (12023): Found entity 1: altsyncram_g584 File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/altsyncram_g584.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
@@ -2585,7 +2577,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2020.09.11.01:07:39 Progress: Loading sld6878e44d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.09.22.02:40:39 Progress: Loading sld6878e44d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2619,9 +2611,9 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[7]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp_1:pll_1|PLL_temp_1_0002:pll_temp_1_inst|altera_pll:altera_pll_i|outclk_wire[8]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[1]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+        Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[2]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[3]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[4]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
-        Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[5]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[6]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[7]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
         Warning (14320): Synthesized away node "PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|outclk_wire[8]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
@@ -2631,75 +2623,42 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "PLL_acur1:pll_2|PLL_acur1_0002:pll_acur1_inst|altera_pll:altera_pll_i|outclk_wire[0]" File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 32
-    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
-    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 35
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
+    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 42
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 15
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 15
@@ -2751,14 +2710,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Warning (14632): Output pin "LEDR[2]" driven by bidirectional pin "GPIO[1]" cannot be tri-stated File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
-Warning (14632): Output pin "LEDR[1]" driven by bidirectional pin "GPIO[3]" cannot be tri-stated File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 26
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 228 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 17 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 18 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
 Warning: OUTCLK port on the PLL is not properly connected on instance PLL_temp:pll_0|PLL_temp_0002:pll_temp_inst|altera_pll:altera_pll_i|general[0].gpll. The output clock port on the PLL must be connected. File: c:/altera/16.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 9
     Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 10
     Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 11
@@ -2775,17 +2732,18 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 29
-Info (21057): Implemented 2073 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 53 output pins
-    Info (21060): Implemented 72 bidirectional pins
+    Warning (15610): No output dependent on input pin "SPI_DIN" File: C:/Users/petry/OneDrive/Documents/GitHub/frequency_meter/with_SPI/frequency_meter_v2.v Line: 38
+Info (21057): Implemented 2043 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 55 output pins
+    Info (21060): Implemented 36 bidirectional pins
     Info (21061): Implemented 1826 logic cells
     Info (21064): Implemented 97 RAM segments
     Info (21065): Implemented 3 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
-    Info: Peak virtual memory: 5129 megabytes
-    Info: Processing ended: Fri Sep 11 00:07:54 2020
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:01:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
+    Info: Peak virtual memory: 5132 megabytes
+    Info: Processing ended: Tue Sep 22 01:40:58 2020
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:29
 
 
