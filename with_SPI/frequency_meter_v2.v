@@ -28,15 +28,17 @@ module frequency_meter_v2(
 	//////////// SW //////////
 	input 		     [9:0]		SW,
 
-	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-	//inout 		    [35:0]		GPIO,
-	input lvds_in,//_p, lvds_in_n,
-	output lvds_out,//_p, lvds_out_n,
+	input lvds_in, //входная линия LVDS
+	output lvds_out,//выходная линия LVDS
+	
+	/// Пины для SPI ///
 	
 	input SPI_SS,
 	input SPI_SCK,
 	input SPI_DIN,
 	output SPI_DOUT,
+	
+	/// GPIO_1 ///
 	
 	inout				 [35:0]		GPIO_1
 );
@@ -49,6 +51,9 @@ module frequency_meter_v2(
 
 wire cout_i, clk_in;
 reg cout_b, sclr_b = 0, aclr_i = 0, led_out = 0;
+
+
+// передача измеряемой частоты на выход LVDS и приём её на вход LVDS
 
 assign lvds_out = clk_0_5;
 assign clk_in = lvds_in;
@@ -65,13 +70,30 @@ wire clk_2_0, clk_2_1;
 //assign clk_out = SW[0] ? (SW[1] ? (SW[2] ? (SW[3] ? clk_1_8 : clk_1_7) : (SW[3] ? clk_1_6 : clk_1_5)) : (SW[2] ? (SW[3] ? clk_1_4 : clk_1_3) : (SW[3] ? clk_1_2 : clk_1_1))) : 
 								//(SW[1] ? (SW[2] ? (SW[3] ? clk_0_8 : clk_0_7) : (SW[3] ? clk_0_6 : clk_0_5)) : (SW[2] ? (SW[3] ? clk_0_4 : clk_0_3) : (SW[3] ? clk_0_2 : clk_0_1)));
 
-//Параметр, дублирующий значение в модуле freq_m_module для вывода его на 7-сегментные индикаторы
+//Регистр, содержащий значение опорной частоты
 								
-parameter freq_base = 31'd200_000_000;//MHz
+reg [31:0] freq_base;//MHz
+
+logic [31:0] time_del;
 
 //=======================================================
 //  Structural coding
 //=======================================================
+
+// переключения между двумя вариантами опорной частоты (только значений, переключение сигналов не реализовано)
+assign freq_base = SW[0] ? 31'd50_000_000 : 31'd200_000_000;
+
+assign time_del = SW[3:1];// + 1'b1;
+
+// возможный вариант реализации переключения значений
+
+/*always @(posedge CLOCK_50)
+begin
+	
+	if (SW[0] == 0) freq_base = 31'd200_000_000;
+	else freq_base = 31'd50_000_000;
+	
+end*/
 
 //Вывод значения опорной частоты на 7-сегментные индикаторы (без 3х младших разрядов)
 
@@ -129,15 +151,6 @@ SEG_HEX u5
 	
 );
 
-//Вариант переключения опорных частот кнопками, в случае, если freq_base определить как регистр (в таком случае не работало)
-
-/*always @(negedge KEY[1] or negedge KEY[2])
-begin
-	
-	if (KEY[1] == 1'b0) freq_base = 31'd700_000_000;
-	if (KEY[2] == 1'b0) freq_base = 31'd200_000_000;
-	
-end*/
 
 //Все PLL используются только для отладки и демонстрации возможностей частотомера
 
@@ -200,11 +213,15 @@ freq_m_module freq_meter
 	
 	.clk_base(clk_1_0),
 	.clk_in(clk_in),
-	.freq_mem(freq_mem),
+	.freq_base(freq_base),
+	.time_del(time_del),
+	.freq_mem(freq_mem), //определение перед модулем SPI
 	.cout_i(cout_i),
 	.cout_b(cout_b)
 	
 );
+
+// мигание светодиода по сигналу cout_b
 
 always @(posedge cout_b)
 begin
@@ -226,14 +243,6 @@ reg [7:0] tdata = 8'b0;//регистр, содержащий данный, от
 
 wire [3:0] i; //номер отправленного байта (изменяется от 0 до 3), необходим для побайтной отправки 32-битного числа
 reg [31:0] freq_mem; //регистр-хранилище для данных об измеряемой частоте
-
-wire ss, sck, sdin, sdout; //линии SPI
-
-//подключение соответствующих линий SPI 
-/*assign ss = GPIO[3];
-assign sck = GPIO[1];
-assign sdin = GPIO[5];
-assign GPIO[7] = sdout;*/
 
 //выключение SPI до момента первого рассчитанного значения частоты
 initial
@@ -295,6 +304,7 @@ assign LEDR[2] = SPI_SCK;
 	
 );
 
+// несколько перепробованных вариантов подключения LVDS, которые не заработали или не понадобились
 
 /*LVDS_BUF_IN lvds_in
 (

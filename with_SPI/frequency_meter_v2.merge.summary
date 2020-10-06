@@ -1,17 +1,17 @@
-Partition Merge Status : Successful - Wed Sep 09 20:46:04 2020
+Partition Merge Status : Successful - Mon Oct 05 19:25:34 2020
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : frequency_meter_v2
 Top-level Entity Name : frequency_meter_v2
 Family : Cyclone V
-Logic utilization (in ALMs) : 1,160 / 32,070 ( 4 % )
-Total registers : 2072
-Total pins : 142 / 457 ( 31 % )
+Logic utilization (in ALMs) : 1,645 / 32,070 ( 5 % )
+Total registers : 1742
+Total pins : 114 / 457 ( 25 % )
 Total virtual pins : 0
-Total block memory bits : 16,384 / 4,065,280 ( < 1 % )
-Total DSP Blocks : 0 / 87 ( 0 % )
+Total block memory bits : 393,216 / 4,065,280 ( 10 % )
+Total DSP Blocks : 2 / 87 ( 2 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1 / 6 ( 17 % )
+Total PLLs : 2 / 6 ( 33 % )
 Total DLLs : 0 / 4 ( 0 % )
